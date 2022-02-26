@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+{%block content%}
+<form action="store" method="post">
+  {%csrf_token%}
+  <h1 align="center">BPP MONITORING</h1>
+  ENTER BP:<input align="center" type="text" name="bpp"><br>
+  ENTER DATE:<input align="center" type="text" name="date"><br>
+  <input type="submit">
+</form>
+<h1> {{result}} </h1>
+<form action="search" method="post">
+  {%csrf_token%}
+  <h1 align="center">SEARCH YOUR BPP </h1>
+  ENTER DATE:<input align="center" type="text" name="DATEE"><br>
+  <input type="submit">
+</form>
+<h1> {{bpdate}} </h1>
+
+<!-- <script>
+
+let text = "";
+for (let i = 0; i < {{res}}; i++) {
+  text += i+ "<br>";
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<p id="demo"></p> -->
+{%endblock%}
